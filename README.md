@@ -24,18 +24,16 @@ Here are some ideas to get you started:
 
 ### Skills
 
-```
-|               | Skills                                             |
-| :------------ | :------------------------------------------------- |
-| **Front End** | Javascript, Typescript, Vue                        |
-| **Back End**  | Node.js                                            |
-| **Language**  | Java, Python, C, C++                               |
-```
+|               | Skills                      |
+| :------------ | :-------------------------- |
+| **Front End** | Javascript, Typescript, Vue |
+| **Back End**  | Node.js                     |
+| **Language**  | Java, Python, C, C++        |
 
 ### Todo List
 
-```
 **In Process**
+
 - [ ] Typescript type-challenges
 - [ ] Vue source code
-```
+
