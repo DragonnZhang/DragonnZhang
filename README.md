@@ -1,5 +1,3 @@
-### Hi there 👋
-
 <!--
 **DragonnZhang/DragonnZhang** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
@@ -14,3 +12,30 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+## Hi There！This is Dragon :wink:
+
+### About Me
+
+- :computer:  I' m TianHao Zhang From Beijing, China.
+- :book: Undergraduate Student @ BUAA.
+- :pager: Aim to be a front-end engineer.
+- :camera: [This is my blog.](https://juejin.cn/user/1684908923689773)
+
+### Skills
+
+```
+|               | Skills                                             |
+| :------------ | :------------------------------------------------- |
+| **Front End** | Javascript, Typescript, Vue                        |
+| **Back End**  | Node.js                                            |
+| **Language**  | Java, Python, C, C++                               |
+```
+
+### Todo List
+
+```
+**In Process**
+- [ ] Typescript type-challenges
+- [ ] Vue source code
+```
