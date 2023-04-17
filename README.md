@@ -42,7 +42,7 @@ Here are some ideas to get you started:
 
 **Vue Source Code Plan**
 
-<table>
+<table width="100%">
   <tr align="center">
     <th>Package</th>
     <th>Content</th>
