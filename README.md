@@ -32,8 +32,34 @@ Here are some ideas to get you started:
 
 ### Todo List
 
+**Compeleted**
+
+- [x] Typescript type-challenges（Only easy and medium）
+
 **In Process**
 
-- [ ] Typescript type-challenges
 - [ ] Vue source code
+
+**Vue Source Code Plan**
+
+<table>
+  <tr align="center">
+    <th>Package</th>
+    <th>Content</th>
+    <th>Process</th>
+  </tr>
+  <tr align="center">
+  	<td vlign="middle" rowspan="3">Reactivity</td>
+    <td>ref API</td>
+    <td>✅</td>
+  </tr>
+  <tr align="center">
+    <td>computed</td>
+    <td>✅</td>
+  </tr>
+  <tr align="center">
+    <td>reactive</td>
+    <td>In Process</td>
+  </tr>
+</table>
 
