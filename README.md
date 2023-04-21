@@ -59,13 +59,13 @@ Here are some ideas to get you started:
   <tr align="center">
     <td>computed</td>
     <td>✅</td>
-    <td><a href="https://juejin.cn/post/7222460499492831291">vue computed 源码解析
+    <td><a href="https://juejin.cn/post/7222460499492831291">Vue computed 源码解析
 </td>
   </tr>
   <tr align="center">
     <td>reactive</td>
-    <td>In Process</td>
-    <td>In Process</td>
+    <td>✅</td>
+    <td><a href="https://juejin.cn/post/7224369270142566459">Vue reactive 源码解析</td>
   </tr>
 </table>
 
