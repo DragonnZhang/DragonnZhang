@@ -39,6 +39,7 @@ Here are some ideas to get you started:
 **In Process**
 
 - [ ] Vue source code
+- [ ] Webpack basic and perhaps source code
 
 **Vue Source Code Plan**
 
