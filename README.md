@@ -51,7 +51,7 @@ Here are some ideas to get you started:
     <th>Article Link</th>
   </tr>
   <tr align="center">
-  	<td vlign="middle" rowspan="3">reactivity</td>
+  	<td vlign="middle" rowspan="4">reactivity</td>
     <td>ref API</td>
     <td>✅</td>
     <td><a href="https://juejin.cn/post/7220805857738047549">ref API 源码解析</td>
@@ -65,6 +65,11 @@ Here are some ideas to get you started:
     <td>reactive</td>
     <td>✅</td>
     <td><a href="https://juejin.cn/post/7224369270142566459">Vue reactive 源码解析</td>
+  </tr>
+  <tr align="center">
+    <td>watch & watchEffect</td>
+    <td>Pending</td>
+    <td>Pending</td>
   </tr>
   <tr align="center">
   	<td vlign="middle" rowspan="1">runtime-core</td>
