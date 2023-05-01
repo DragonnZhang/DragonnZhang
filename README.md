@@ -68,8 +68,8 @@ Here are some ideas to get you started:
   </tr>
   <tr align="center">
     <td>watch & watchEffect</td>
-    <td>Pending</td>
-    <td>Pending</td>
+    <td>✅</td>
+    <td><a href="https://juejin.cn/post/7228280684207587385">Vue watch 源码解析</td>
   </tr>
   <tr align="center">
   	<td vlign="middle" rowspan="1">runtime-core</td>
