@@ -78,9 +78,9 @@ Here are some ideas to get you started:
   	<td><a href="https://juejin.cn/post/7232194911009472573">Vue createApp 源码解析</td>
   </tr>
   <tr align="center">
-  	<td vlign="middle">renderer</td>
-  	<td vlign="middle">pending</td>
-  	<td vlign="middle">pending</td>
+  	<td>scheduler</td>
+  	<td>✅</td>
+  	<td><a href="https://juejin.cn/post/7233396218105020453">Vue scheduler 源码解析</td>
   </tr>
   <tr align="center">
   	<td vlign="middle" rowspan="1">compiler-core</td>
