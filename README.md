@@ -35,11 +35,12 @@ Here are some ideas to get you started:
 **Compeleted**
 
 - [x] Typescript type-challenges（Only easy and medium）
+- [x] Webpack basic and perhaps source code
 
 **In Process**
 
 - [ ] Vue source code
-- [ ] Webpack basic and perhaps source code
+- [ ] Vite
 
 **Vue Source Code Plan**
 
@@ -89,4 +90,3 @@ Here are some ideas to get you started:
   	<td vlign="middle">pending</td>
   </tr>
 </table>
-
