@@ -20,7 +20,7 @@ Here are some ideas to get you started:
 - :computer:  I' m TianHao Zhang From Beijing, China.
 - :book: Undergraduate Student @ BUAA.
 - :pager: Aim to be a front-end engineer.
-- :camera: [This is my blog.](https://juejin.cn/user/1684908923689773)
+- :camera: [This is my blog.](https://juejin.cn/user/1684908923689773/posts)
 
 ### Skills
 
