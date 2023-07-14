@@ -85,8 +85,8 @@ Here are some ideas to get you started:
   </tr>
   <tr align="center">
   	<td vlign="middle" rowspan="1">compiler-core</td>
-  	<td vlign="middle">pending</td>
-  	<td vlign="middle">pending</td>
-  	<td vlign="middle">pending</td>
+  	<td vlign="middle" colspan="3">pending</td>
+  	<!-- <td vlign="middle">pending</td>
+  	<td vlign="middle">pending</td> -->
   </tr>
 </table>
