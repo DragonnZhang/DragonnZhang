@@ -73,7 +73,7 @@ Here are some ideas to get you started:
     <td><a href="https://juejin.cn/post/7228280684207587385">Vue watch 源码解析</td>
   </tr>
   <tr align="center">
-  	<td vlign="middle" rowspan="2">runtime-core</td>
+  	<td vlign="middle" rowspan="3">runtime-core</td>
   	<td>createApp</td>
   	<td>✅</td>
   	<td><a href="https://juejin.cn/post/7232194911009472573">Vue createApp 源码解析</td>
@@ -83,6 +83,11 @@ Here are some ideas to get you started:
   	<td>✅</td>
   	<td><a href="https://juejin.cn/post/7233396218105020453">Vue scheduler 源码解析</td>
   </tr>
+    <tr align="center">
+  	<td>lifecycle</td>
+  	<td>✅</td>
+  	<td><a href="https://juejin.cn/post/7257441582013612087">Vue 生命周期钩子 源码解析</td>
+  </tr>
   <tr align="center">
   	<td vlign="middle" rowspan="1">compiler-core</td>
   	<td vlign="middle" colspan="3">pending</td>
@@ -90,3 +95,4 @@ Here are some ideas to get you started:
   	<td vlign="middle">pending</td> -->
   </tr>
 </table>
+
