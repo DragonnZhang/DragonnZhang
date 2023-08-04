@@ -27,7 +27,7 @@ Here are some ideas to get you started:
 |               | Skills                      |
 | :------------ | :-------------------------- |
 | **Front End** | Javascript, Typescript, Vue |
-| **Back End**  | Node.js                     |
+| **Back End**  | Node.js, Express, Koa, Nuxt |
 | **Language**  | Java, Python, C, C++        |
 
 ### Todo List
