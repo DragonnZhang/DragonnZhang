@@ -73,7 +73,7 @@ Here are some ideas to get you started:
     <td><a href="https://juejin.cn/post/7228280684207587385">Vue 源码解析（四）：watch</td>
   </tr>
   <tr align="center">
-  	<td vlign="middle" rowspan="4">runtime-core</td>
+  	<td vlign="middle" rowspan="5">runtime-core</td>
   	<td>createApp</td>
   	<td>✅</td>
   	<td><a href="https://juejin.cn/post/7232194911009472573">Vue 源码解析（五）：createApp</td>
@@ -83,16 +83,20 @@ Here are some ideas to get you started:
   	<td>✅</td>
   	<td><a href="https://juejin.cn/post/7233396218105020453">Vue 源码解析（六）：scheduler</td>
   </tr>
-    <tr align="center">
+  <tr align="center">
   	<td>lifecycle</td>
   	<td>✅</td>
   	<td><a href="https://juejin.cn/post/7257441582013612087">Vue 源码解析（七）：生命周期钩子</td>
   </tr>
-  </tr>
-    <tr align="center">
+  <tr align="center">
   	<td>provide & inject</td>
   	<td>✅</td>
   	<td><a href="https://juejin.cn/post/7265522020883873804">Vue 源码解析（八）：provide & inject</td>
+  </tr>
+  <tr align="center">
+  	<td>renderer</td>
+  	<td>✅</td>
+  	<td><a href="https://juejin.cn/post/7277875323164950582">Vue 源码解析（九）：renderer</td>
   </tr>
   <tr align="center">
   	<td vlign="middle" rowspan="1">compiler-core</td>
