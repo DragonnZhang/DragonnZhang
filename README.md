@@ -28,7 +28,7 @@ Here are some ideas to get you started:
 | :------------ | :-------------------------- |
 | **Front End** | Javascript, Typescript, Vue |
 | **Back End**  | Node.js, Express, Koa, Nuxt |
-| **Language**  | Java, Python, C, C++        |
+| **Language**  | Java, Python, C, C++, Ruby  |
 
 ### Todo List
 
@@ -105,4 +105,3 @@ Here are some ideas to get you started:
   	<td vlign="middle">pending</td> -->
   </tr>
 </table>
-
