@@ -24,11 +24,11 @@ Here are some ideas to get you started:
 
 ### Skills
 
-|               | Skills                      |
-| :------------ | :-------------------------- |
-| **Front End** | Javascript, Typescript, Vue |
-| **Back End**  | Node.js, Express, Koa, Nuxt |
-| **Language**  | Java, Python, C, C++, Ruby  |
+|               | Skills                            |
+| :------------ | :-------------------------------- |
+| **Front End** | Javascript, Typescript, Vue, Nuxt |
+| **Back End**  | Node.js, Express, Koa             |
+| **Language**  | Java, Python, C, C++, Ruby        |
 
 ### Todo List
 
