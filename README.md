@@ -73,7 +73,7 @@ Here are some ideas to get you started:
     <td><a href="https://juejin.cn/post/7228280684207587385">Vue 源码解析（四）：watch</td>
   </tr>
   <tr align="center">
-  	<td vlign="middle" rowspan="5">runtime-core</td>
+  	<td vlign="middle" rowspan="6">runtime-core</td>
   	<td>createApp</td>
   	<td>✅</td>
   	<td><a href="https://juejin.cn/post/7232194911009472573">Vue 源码解析（五）：createApp</td>
@@ -99,9 +99,15 @@ Here are some ideas to get you started:
   	<td><a href="https://juejin.cn/post/7277875323164950582">Vue 源码解析（九）：renderer</td>
   </tr>
   <tr align="center">
+  	<td>Diff</td>
+  	<td>✅</td>
+  	<td><a href="https://juejin.cn/post/7301242165279457307">Vue 源码解析（十）：Diff 算法</td>
+  </tr>
+  <tr align="center">
   	<td vlign="middle" rowspan="1">compiler-core</td>
   	<td vlign="middle" colspan="3">pending</td>
   	<!-- <td vlign="middle">pending</td>
   	<td vlign="middle">pending</td> -->
   </tr>
 </table>
+
