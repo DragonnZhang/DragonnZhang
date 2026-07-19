@@ -1,15 +1,64 @@
-
-    <svg width="576.5"  height="120" viewBox="0 0 576.5 120" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-    <style>
-    .text { font: 600 16px 'Segoe UI', Ubuntu, Sans-Serif; fill: #2f80ed }
-    .small { font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #24292e }
-    .gray { fill: #858585 }
-    </style>
-    <rect x="0.5" y="0.5" width="575.5" height="99%" rx="4.5" fill="#ffffff" stroke="#e4e2e2"/>
-    <text x="25" y="45" class="text">Something went wrong! file an issue at https://tiny.one/readme-stats</text>
-    <text data-testid="message" x="25" y="55" class="text small">
-      <tspan x="25" dy="18">Resource limits for this query exceeded.</tspan>
-      <tspan x="25" dy="18" class="gray">OK</tspan>
-    </text>
-    </svg>
-  
+<svg
+  width="520"
+  height="178"
+  viewBox="0 0 520 178"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-labelledby="stats-title stats-description"
+>
+  <title id="stats-title">Dragon&apos;s GitHub stats</title>
+  <desc id="stats-description">Stars earned: 19, Commits · last year: 637, Pull requests: 179, Issues: 43, Reviews: 350, Contributed to: 11</desc>
+  <style>
+    .header {
+      font: 600 18px "Segoe UI", Ubuntu, Arial, sans-serif;
+      fill: #2f80ed;
+    }
+    .label {
+      font: 600 12px "Segoe UI", Ubuntu, Arial, sans-serif;
+      fill: #57606a;
+    }
+    .value {
+      font: 700 20px "Segoe UI", Ubuntu, Arial, sans-serif;
+      fill: #24292f;
+    }
+  </style>
+  <rect x="0.5" y="0.5" width="519" height="177" rx="6" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="24" y="34" class="header">Dragon&apos;s GitHub stats</text>
+  <g transform="translate(24 69)">
+    <circle cx="5" cy="-5" r="5" fill="#f1c40f" opacity="0.22"/>
+    <circle cx="5" cy="-5" r="2.5" fill="#f1c40f"/>
+    <text x="18" y="0" class="label">Stars earned</text>
+    <text x="0" y="27" class="value">19</text>
+  </g>
+  <g transform="translate(190 69)">
+    <circle cx="5" cy="-5" r="5" fill="#2f80ed" opacity="0.22"/>
+    <circle cx="5" cy="-5" r="2.5" fill="#2f80ed"/>
+    <text x="18" y="0" class="label">Commits · last year</text>
+    <text x="0" y="27" class="value">637</text>
+  </g>
+  <g transform="translate(356 69)">
+    <circle cx="5" cy="-5" r="5" fill="#8250df" opacity="0.22"/>
+    <circle cx="5" cy="-5" r="2.5" fill="#8250df"/>
+    <text x="18" y="0" class="label">Pull requests</text>
+    <text x="0" y="27" class="value">179</text>
+  </g>
+  <g transform="translate(24 126)">
+    <circle cx="5" cy="-5" r="5" fill="#cf222e" opacity="0.22"/>
+    <circle cx="5" cy="-5" r="2.5" fill="#cf222e"/>
+    <text x="18" y="0" class="label">Issues</text>
+    <text x="0" y="27" class="value">43</text>
+  </g>
+  <g transform="translate(190 126)">
+    <circle cx="5" cy="-5" r="5" fill="#1a7f37" opacity="0.22"/>
+    <circle cx="5" cy="-5" r="2.5" fill="#1a7f37"/>
+    <text x="18" y="0" class="label">Reviews</text>
+    <text x="0" y="27" class="value">350</text>
+  </g>
+  <g transform="translate(356 126)">
+    <circle cx="5" cy="-5" r="5" fill="#bf8700" opacity="0.22"/>
+    <circle cx="5" cy="-5" r="2.5" fill="#bf8700"/>
+    <text x="18" y="0" class="label">Contributed to</text>
+    <text x="0" y="27" class="value">11</text>
+  </g>
+</svg>
