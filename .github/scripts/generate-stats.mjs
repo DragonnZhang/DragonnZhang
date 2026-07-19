@@ -1,5 +1,7 @@
 import { mkdir, rename, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { calculateRank } from "github-readme-stats/src/calculateRank.js";
+import { renderStatsCard } from "github-readme-stats/src/cards/stats.js";
 
 const endpoint = "https://api.github.com/graphql";
 const token = process.env.GITHUB_TOKEN;
@@ -50,6 +52,9 @@ const activityQuery = `
       closedIssues: issues(states: CLOSED) {
         totalCount
       }
+      followers {
+        totalCount
+      }
     }
   }
 `;
@@ -63,6 +68,7 @@ const repositoriesQuery = `
         ownerAffiliations: OWNER
         orderBy: { direction: DESC, field: STARGAZERS }
       ) {
+        totalCount
         nodes {
           stargazers {
             totalCount
@@ -130,10 +136,11 @@ const graphql = async (query, variables) => {
   throw lastError;
 };
 
-const fetchRepositoryStars = async () => {
+const fetchRepositoryStats = async () => {
   let after = null;
   let hasNextPage = true;
   let stars = 0;
+  let repositoryCount = 0;
 
   while (hasNextPage) {
     const data = await graphql(repositoriesQuery, {
@@ -149,112 +156,12 @@ const fetchRepositoryStars = async () => {
       (total, repository) => total + repository.stargazers.totalCount,
       0,
     );
+    repositoryCount = repositories.totalCount;
     hasNextPage = repositories.pageInfo.hasNextPage;
     after = repositories.pageInfo.endCursor;
   }
 
-  return stars;
-};
-
-const escapeXml = (value) =>
-  String(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&apos;");
-
-const formatNumber = (value) => new Intl.NumberFormat("en-US").format(value);
-
-const renderMetric = ({ x, y, label, value, accent }) =>
-  `<g transform="translate(${x} ${y})">
-    <circle cx="5" cy="-5" r="5" fill="${accent}" opacity="0.22"/>
-    <circle cx="5" cy="-5" r="2.5" fill="${accent}"/>
-    <text x="18" y="0" class="label">${escapeXml(label)}</text>
-    <text x="0" y="27" class="value">${escapeXml(formatNumber(value))}</text>
-  </g>`;
-
-const renderSvg = (stats) => {
-  const metrics = [
-    {
-      x: 24,
-      y: 69,
-      label: "Stars earned",
-      value: stats.stars,
-      accent: "#f1c40f",
-    },
-    {
-      x: 190,
-      y: 69,
-      label: "Commits · last year",
-      value: stats.commits,
-      accent: "#2f80ed",
-    },
-    {
-      x: 356,
-      y: 69,
-      label: "Pull requests",
-      value: stats.pullRequests,
-      accent: "#8250df",
-    },
-    {
-      x: 24,
-      y: 126,
-      label: "Issues",
-      value: stats.issues,
-      accent: "#cf222e",
-    },
-    {
-      x: 190,
-      y: 126,
-      label: "Reviews",
-      value: stats.reviews,
-      accent: "#1a7f37",
-    },
-    {
-      x: 356,
-      y: 126,
-      label: "Contributed to",
-      value: stats.contributedTo,
-      accent: "#bf8700",
-    },
-  ];
-
-  const title = `${stats.name}'s GitHub stats`;
-  const description = metrics
-    .map(({ label, value }) => `${label}: ${formatNumber(value)}`)
-    .join(", ");
-
-  return `<svg
-  width="520"
-  height="178"
-  viewBox="0 0 520 178"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
-  role="img"
-  aria-labelledby="stats-title stats-description"
->
-  <title id="stats-title">${escapeXml(title)}</title>
-  <desc id="stats-description">${escapeXml(description)}</desc>
-  <style>
-    .header {
-      font: 600 18px "Segoe UI", Ubuntu, Arial, sans-serif;
-      fill: #2f80ed;
-    }
-    .label {
-      font: 600 12px "Segoe UI", Ubuntu, Arial, sans-serif;
-      fill: #57606a;
-    }
-    .value {
-      font: 700 20px "Segoe UI", Ubuntu, Arial, sans-serif;
-      fill: #24292f;
-    }
-  </style>
-  <rect x="0.5" y="0.5" width="519" height="177" rx="6" fill="#ffffff" stroke="#d0d7de"/>
-  <text x="24" y="34" class="header">${escapeXml(title)}</text>
-  ${metrics.map(renderMetric).join("\n  ")}
-</svg>
-`;
+  return { repositoryCount, stars };
 };
 
 const contributionData = await graphql(contributionQuery, { login: username });
@@ -269,17 +176,40 @@ if (!activityData.user) {
 
 const contributions = contributionData.user.contributionsCollection;
 const activity = activityData.user;
+const repositories = await fetchRepositoryStats();
 const stats = {
   name: contributionData.user.name || contributionData.user.login,
-  stars: await fetchRepositoryStars(),
-  commits: contributions.totalCommitContributions,
-  reviews: contributions.totalPullRequestReviewContributions,
-  pullRequests: activity.pullRequests.totalCount,
-  issues: activity.openIssues.totalCount + activity.closedIssues.totalCount,
+  totalStars: repositories.stars,
+  totalCommits: contributions.totalCommitContributions,
+  totalIssues:
+    activity.openIssues.totalCount + activity.closedIssues.totalCount,
+  totalPRs: activity.pullRequests.totalCount,
+  totalPRsMerged: 0,
+  mergedPRsPercentage: 0,
+  totalReviews: contributions.totalPullRequestReviewContributions,
+  totalDiscussionsStarted: 0,
+  totalDiscussionsAnswered: 0,
   contributedTo: activity.repositoriesContributedTo.totalCount,
 };
+stats.rank = calculateRank({
+  all_commits: false,
+  commits: stats.totalCommits,
+  prs: stats.totalPRs,
+  issues: stats.totalIssues,
+  reviews: stats.totalReviews,
+  repos: repositories.repositoryCount,
+  stars: stats.totalStars,
+  followers: activity.followers.totalCount,
+});
 
-const svg = renderSvg(stats);
+const svg = `${renderStatsCard(stats, {
+  show_icons: true,
+  hide_title: true,
+  text_color: "24292e",
+  bg_color: "ffffff",
+})
+  .replace(/[ \t]+$/gm, "")
+  .trimEnd()}\n`;
 const temporaryPath = `${outputPath}.tmp`;
 
 await mkdir(path.dirname(outputPath), { recursive: true });
