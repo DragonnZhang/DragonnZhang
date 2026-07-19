@@ -22,11 +22,15 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: "24"
+          cache: npm
+
+      - name: Install renderer
+        run: npm ci --ignore-scripts
 
       - name: Generate stats card
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: node .github/scripts/generate-stats.mjs
+        run: npm run generate:stats
 
       - name: Validate stats card
         run: |

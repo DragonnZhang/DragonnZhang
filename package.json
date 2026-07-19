@@ -1,0 +1,14 @@
+{
+  "name": "dragonnzhang-profile",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate:stats": "node .github/scripts/generate-stats.mjs"
+  },
+  "dependencies": {
+    "github-readme-stats": "https://codeload.github.com/stats-organization/github-readme-stats/tar.gz/d79be7a9fd50ce38aef89306c8a1185fc0443bc7"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}
