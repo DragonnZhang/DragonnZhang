@@ -8,7 +8,7 @@
   aria-labelledby="stats-title stats-description"
 >
   <title id="stats-title">Dragon&apos;s GitHub stats</title>
-  <desc id="stats-description">Stars earned: 20, Commits · last year: 637, Pull requests: 195, Issues: 43, Reviews: 350, Contributed to: 11</desc>
+  <desc id="stats-description">Stars earned: 19, Commits · last year: 637, Pull requests: 179, Issues: 43, Reviews: 350, Contributed to: 11</desc>
   <style>
     .header {
       font: 600 18px "Segoe UI", Ubuntu, Arial, sans-serif;
@@ -29,7 +29,7 @@
     <circle cx="5" cy="-5" r="5" fill="#f1c40f" opacity="0.22"/>
     <circle cx="5" cy="-5" r="2.5" fill="#f1c40f"/>
     <text x="18" y="0" class="label">Stars earned</text>
-    <text x="0" y="27" class="value">20</text>
+    <text x="0" y="27" class="value">19</text>
   </g>
   <g transform="translate(190 69)">
     <circle cx="5" cy="-5" r="5" fill="#2f80ed" opacity="0.22"/>
@@ -41,7 +41,7 @@
     <circle cx="5" cy="-5" r="5" fill="#8250df" opacity="0.22"/>
     <circle cx="5" cy="-5" r="2.5" fill="#8250df"/>
     <text x="18" y="0" class="label">Pull requests</text>
-    <text x="0" y="27" class="value">195</text>
+    <text x="0" y="27" class="value">179</text>
   </g>
   <g transform="translate(24 126)">
     <circle cx="5" cy="-5" r="5" fill="#cf222e" opacity="0.22"/>
