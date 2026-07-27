@@ -70,9 +70,7 @@ const repositoriesQuery = `
       ) {
         totalCount
         nodes {
-          stargazers {
-            totalCount
-          }
+          stargazerCount
         }
         pageInfo {
           hasNextPage
@@ -153,7 +151,7 @@ const fetchRepositoryStats = async () => {
     }
 
     stars += repositories.nodes.reduce(
-      (total, repository) => total + repository.stargazers.totalCount,
+      (total, repository) => total + repository.stargazerCount,
       0,
     );
     repositoryCount = repositories.totalCount;
